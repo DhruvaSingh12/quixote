@@ -62,7 +62,7 @@ const safetySettings: SafetySetting[] = [
 // Function to start a chat session and send a message
 async function runChat(prompt: string): Promise<string> {
   if (!prompt || typeof prompt !== "string") {
-    return "Error: Invalid input prompt. 😕";
+    return "Error: Invalid input prompt. 😕☹️";
   }
 
   const genAI = initializeClient();
