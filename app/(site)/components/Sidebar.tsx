@@ -53,7 +53,7 @@ const Sidebar: React.FC = () => {
                 <div
                   key={index}
                   onClick={() => loadPrompt(item)}
-                  className="my-2 flex items-center bg-gray-800 gap-2 w-[120px] md:w-[200px] rounded-lg text-gray-200 cursor-pointer hover:bg-gray-300 hover:text-black p-2"
+                  className="my-2 flex items-center bg-pink-200 gap-2 w-[120px] md:w-[200px] rounded-lg text-black cursor-pointer hover:bg-pink-300 hover:text-black p-2"
                 >
                   <MessageSquare size={24} className="cursor-pointer" />
                   <p>{item.length > 17 ? `${item.slice(0, 17)}...` : item}</p>
