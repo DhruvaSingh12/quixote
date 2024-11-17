@@ -22,7 +22,7 @@ interface ContextType {
   isOpen: boolean;
 }
 
-const GeminiBody: React.FC = () => {
+const MainContent: React.FC = () => {
   const {
     submit,
     recentPrompts,
@@ -128,4 +128,4 @@ const GeminiBody: React.FC = () => {
   );
 };
 
-export default GeminiBody;
+export default MainContent;
