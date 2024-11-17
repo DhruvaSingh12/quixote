@@ -5,6 +5,7 @@ import ToasterProvider from "@/providers/ToasterProvider";
 import { Analytics } from "@vercel/analytics/react";
 import ContextProvider from "../providers/ContextProvider";
 
+
 const font = Figtree({subsets: ["latin"]});
 
 export const metadata: Metadata = {
