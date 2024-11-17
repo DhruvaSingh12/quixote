@@ -21,6 +21,8 @@ interface ContextType {
   setPrevPrompts: React.Dispatch<React.SetStateAction<string[]>>;
   prevPrompts: string[];
   setDisplayResult: React.Dispatch<React.SetStateAction<boolean>>;
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 interface ContextProviderProps {
@@ -30,13 +32,13 @@ interface ContextProviderProps {
 export const Context = createContext<ContextType | null>(null);
 
 const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState("dark");
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState("");
   const [recentPrompts, setRecentPrompts] = useState("");
   const [displayResult, setDisplayResult] = useState(false);
   const [prevPrompts, setPrevPrompts] = useState<string[]>([]);
+  const [isOpen, setIsOpen] = useState<boolean>(false); 
 
   const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -107,6 +109,8 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       setPrevPrompts,
       prevPrompts,
       setDisplayResult,
+      isOpen,
+      setIsOpen, 
     }),
     [
       submit,
@@ -116,12 +120,13 @@ const ContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
       displayResult,
       recentPrompts,
       prevPrompts,
+      isOpen,
     ]
   );
 
   return (
     <Context.Provider value={contextValue}>
-      <div className={theme}>{children}</div>
+      <div>{children}</div>
     </Context.Provider>
   );
 };
