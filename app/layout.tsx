@@ -9,7 +9,7 @@ const font = Figtree({subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Quixote",
-  description: "A Gemini 1.5 Flash powered chatbot.",
+  description: "Gemini-1.5 Flash powered chatbot.",
 };
 
 export const revalidate = 0;
