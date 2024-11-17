@@ -60,7 +60,7 @@ const MainContent: React.FC = () => {
                   Icon: FileQuestionIcon,
                 },
                 {
-                  text: "Visualize the night sky look like on a planet in a different galaxy?",
+                  text: "Visualize the night sky on a planet in a different galaxy?",
                   Icon: Video,
                 },
                 {
